@@ -2,6 +2,9 @@
 import time
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext, MessageHandler, filters, ContextTypes, Application
+from secureFile import TelegramAPI
+
+# from app import linkedIn
 API=""
 
 
@@ -24,7 +27,7 @@ async def handle_message(update: Update, context: CallbackContext):
 
 
 def main():
-    application = ApplicationBuilder().token(API).build()
+    application = ApplicationBuilder().token(TelegramAPI).build()
 
     # Command Handler
     application.add_handler(CommandHandler('start', start))

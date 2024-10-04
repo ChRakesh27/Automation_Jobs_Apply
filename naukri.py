@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-
+from secureFile import naukri_cookies
 def add_cookies(driver, cookies):
     for cookie in cookies:
         driver.add_cookie(cookie)
@@ -95,7 +95,7 @@ def apply_naukri_jobs(driver,pageNo):
 def main():
     driver = webdriver.Chrome()
     
-    naukri_cookies = []
+    # naukri_cookies = []
 
     driver.get('https://www.naukri.com/mnjuser/homepage')
     time.sleep(2)

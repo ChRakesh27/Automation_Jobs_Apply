@@ -3,6 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from trainData import UserData
+from secureFile import linkedin_cookies
+
 # Function to add cookies
 def add_cookies(driver, cookies):
     for cookie in cookies:
@@ -78,7 +80,7 @@ def main():
     driver = webdriver.Chrome()
     
     # LinkedIn Cookies (sample structure)
-    linkedin_cookies = [{"name":"","value":""}]
+    # linkedin_cookies = [{"name":"","value":""}]
 
     # Apply for jobs on LinkedIn
     driver.get('https://www.linkedin.com/jobs/search')

@@ -1,9 +1,8 @@
-API="7795328391:AAFXLIlN66jnoRKtQOKKKOcAQlZ3EmBgqoo"
 
 import time
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext, MessageHandler, filters, ContextTypes, Application
-# from app import linkedIn
+API=""
 
 
 async def start(update: Update, context: CallbackContext):

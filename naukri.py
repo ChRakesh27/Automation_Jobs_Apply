@@ -7,19 +7,6 @@ def add_cookies(driver, cookies):
     for cookie in cookies:
         driver.add_cookie(cookie)
         
-# def apply_job(driver,job):
-#     row1_element= job.find_element(By.CLASS_NAME,"row1")
-#     anchor_tag = row1_element.find_element(By.TAG_NAME, 'a')
-#     job_href = anchor_tag.get_attribute('href')
-#     driver.get(job_href)
-#     time.sleep(3)
-#     apply_button = driver.find_elements(By.ID,'apply-button')
-#     if(len(apply_button)):
-#        apply_button[0].click()
-#        time.sleep(5)
-#     driver.back()
-#     time.sleep(5)
-#     return 
 
 mySkills=["javascript","node","react","angular","front end",'css','html','web development','python']
 
@@ -108,11 +95,7 @@ def apply_naukri_jobs(driver,pageNo):
 def main():
     driver = webdriver.Chrome()
     
-    naukri_cookies = [
-        {'name': 'is_login', 'value':'1', 'domain': '.naukri.com'},
-        {'name': 'nauk_at', 'value': 'eyJraWQiOiIxIiwidHlwIjoiSldUIiwiYWxnIjoiUlM1MTIifQ.eyJ1ZF9yZXNJZCI6MjQzNTE0Nzc3LCJzdWIiOiIyNTY5NTIxMjciLCJ1ZF91c2VybmFtZSI6ImNoaXBwYXJha2VzaDAxQGdtYWlsLmNvbSIsInVkX2lzRW1haWwiOnRydWUsImlzcyI6IkluZm9FZGdlIEluZGlhIFB2dC4gTHRkLiIsInVzZXJBZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMjkuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImlwQWRyZXNzIjoiMjQwMTo0OTAwOjg4MmQ6ZDczYTpmYzg1OjY1NTk6NGQ2MjoxNGFlIiwidWRfaXNUZWNoT3BzTG9naW4iOmZhbHNlLCJ1c2VySWQiOjI1Njk1MjEyNywic3ViVXNlclR5cGUiOiJqb2JzZWVrZXIiLCJ1c2VyU3RhdGUiOiJBVVRIRU5USUNBVEVEIiwidWRfaXNQYWlkQ2xpZW50IjpmYWxzZSwidWRfZW1haWxWZXJpZmllZCI6dHJ1ZSwidXNlclR5cGUiOiJqb2JzZWVrZXIiLCJzZXNzaW9uU3RhdFRpbWUiOiIyMDI0LTEwLTA0VDE3OjEwOjU5IiwidWRfZW1haWwiOiJjaGlwcGFyYWtlc2gwMUBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6InVzZXIiLCJleHAiOjE3MjgwNDU2NTksInRva2VuVHlwZSI6ImFjY2Vzc1Rva2VuIiwiaWF0IjoxNzI4MDQyMDU5LCJqdGkiOiI0NGUxMGMwZjg3NGI0ZDFiODQxODQ0NjJmYzJjNDliMCIsInBvZElkIjoicHJvZC03NzQ5NWM0YjY5LXM5cm14In0.OjOoREoYodFywdA3BDdHl9X1KosKxdtfptSXVMWVX0DMhZlsfQ5C9T6CMTdQIVGNUSiJ3DBeK_nstEWy2x3CeNhK-LaabHWjnedl51623YQuLAlYw-bIneooOLSb60qNJInZW_llPcxIhtS2JFDWYCI0bto4ud_McexLUf9M9XggSqRilOTsIFhEQMiWX9QdNeunR00gqlAm_aHlcwALR_NzhjEvWkUmtPbKZQf9NszWt6DwMM2UEjHZ-vunjv5AYP1loFX0beA838caDVia9FGpfb3fQn-_rIEjpi0_tCc9-fMVzczHBkBYP-0fA-_KM5S0PtR9ivViJ2_QrWTWkg', 'domain': '.naukri.com'},
-        {'name': 'nauk_sid', 'value': "72a8a9d1bfd64486892d335792faa2b6", 'domain': '.naukri.com'},
-    ]
+    naukri_cookies = []
 
     driver.get('https://www.naukri.com/mnjuser/homepage')
     time.sleep(2)
